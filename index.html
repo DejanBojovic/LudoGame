@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LudoGame</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+    <!-- background - white circle and lines -->
+    <div class="background-line-left"></div>
+    <div class="background-square"></div>
+    <div class="background-line-right"></div>
+
+    <!-- background - houses -->
+    <div id="house-blue-player" class="house house-blue">
+        <div class="icon icon-1-blue empty">
+            <div class="player player-blue" draggable="true"> 
+                <!-- class="blue-player-1" -->
+                <div class="blue-player-mark"></div>
+            </div>
+        </div>
+        <div class="icon icon-2-blue empty">
+            <div class="player player-blue" draggable="true">
+                <div class="blue-player-mark"></div>
+            </div>
+        </div>
+        <div class="icon icon-3-blue empty">
+            <div class="player player-blue" draggable="true">
+                <div class="blue-player-mark"></div>
+            </div>
+        </div>
+        <div class="icon icon-4-blue empty">
+            <div class="player player-blue" draggable="true">
+                <div class="blue-player-mark"></div>
+            </div>
+        </div>
+    </div>
+    <div id="house-yellow-player" class="house house-yellow">
+        <div class="icon icon-1-yellow empty">
+            <div class="player player-yellow" draggable="true">
+                <div class="yellow-player-mark-hor"></div>
+                <div class="yellow-player-mark-ver"></div>
+            </div>
+        </div>
+        <div class="icon icon-2-yellow empty">
+            <div class="player player-yellow" draggable="true">
+                <div class="yellow-player-mark-hor"></div>
+                <div class="yellow-player-mark-ver"></div>
+            </div>
+        </div>
+        <div class="icon icon-3-yellow empty">
+            <div class="player player-yellow" draggable="true">
+                <div class="yellow-player-mark-hor"></div>
+                <div class="yellow-player-mark-ver"></div>
+            </div>
+        </div>
+        <div class="icon icon-4-yellow empty">
+            <div class="player player-yellow" draggable="true">
+                <div class="yellow-player-mark-hor"></div>
+                <div class="yellow-player-mark-ver"></div>
+            </div>
+        </div>
+    </div>
+    <div id="house-green-player" class="house house-green">
+        <div class="icon icon-1-green empty">
+            <div class="player player-green" draggable="true">
+                <div class="green-player-mark"></div>
+            </div>
+        </div>
+        <div class="icon icon-2-green empty">
+            <div class="player player-green" draggable="true">
+                <div class="green-player-mark"></div>
+            </div>
+        </div>
+        <div class="icon icon-3-green empty">
+            <div class="player player-green" draggable="true">
+                <div class="green-player-mark"></div>
+            </div>
+        </div>
+        <div class="icon icon-4-green empty">
+            <div class="player player-green" draggable="true">
+                <div class="green-player-mark"></div>
+            </div>
+        </div>
+    </div>
+    <div id="house-red-player" class="house house-red">
+        <div class="icon icon-1-red empty">
+            <div class="player player-red" draggable="true">
+                <div class="red-player-mark"></div>
+            </div>
+        </div>
+        <div class="icon icon-2-red empty">
+            <div class="player player-red" draggable="true">
+                <div class="red-player-mark"></div>
+            </div>
+        </div>
+        <div class="icon icon-3-red empty">
+            <div class="player player-red" draggable="true">
+                <div class="red-player-mark"></div>
+            </div>
+        </div>
+        <div class="icon icon-4-red empty">
+            <div class="player player-red" draggable="true">
+                <div class="red-player-mark"></div>
+            </div>
+        </div>
+    </div>
+    <!-- ================================== -->
+
+    <!-- main board -->
+    <section class="main-circle">
+        <!-- dice -->
+        <div class="dice">
+            <div class="dice-row-1">
+                <div class="dice-row-1-first"></div>
+                <div class="dice-row-1-second"></div>
+                <div class="dice-row-1-third"></div>
+            </div>
+            <div class="dice-row-2">
+                <div class="dice-row-2-first"></div>
+                <div class="dice-row-2-second"></div>
+                <div class="dice-row-2-third"></div>
+            </div>
+            <div class="dice-row-3">
+                <div class="dice-row-3-first"></div>
+                <div class="dice-row-3-second"></div>
+                <div class="dice-row-3-third"></div>
+            </div>
+        </div>
+
+        <!-- fields -->
+        <!-- left(blue) and right(green) are the same 
+        empty is a class for dragNdrop-->
+        <div class="fields-left">
+            <div class="fields-row-1">
+                <div class="fields-row-1-first empty">
+                    <div class="fields-left-starting"></div>
+                </div>
+                <div class="fields-row-1-second empty"></div>
+                <div class="fields-row-1-third empty"></div>
+                <div class="fields-row-1-fourth empty"></div>
+                <div class="fields-row-1-fifth empty"></div>
+            </div>
+            <div class="fields-row-2">
+                <!-- house -->
+                <div class="fields-row-2-first empty"></div>
+                <div class="fields-row-2-second empty"></div>
+                <div class="fields-row-2-third empty"></div>
+                <div class="fields-row-2-fourth empty"></div>
+                <div class="fields-row-2-fifth empty"></div>
+            </div>
+            <div class="fields-row-3">
+                <div class="fields-row-3-first empty"></div>
+                <div class="fields-row-3-second empty"></div>
+                <div class="fields-row-3-third empty"></div>
+                <div class="fields-row-3-fourth empty"></div>
+                <div class="fields-row-3-fifth empty"></div>
+            </div>
+        </div>
+        <div class="fields-right">
+            <div class="fields-row-1">
+                <div class="fields-row-1-first empty"></div>
+                <div class="fields-row-1-second empty"></div>
+                <div class="fields-row-1-third empty"></div>
+                <div class="fields-row-1-fourth empty"></div>
+                <div class="fields-row-1-fifth empty"></div>
+            </div>
+            <div class="fields-row-2">
+                <!-- house -->
+                <div class="fields-row-2-first empty"></div>
+                <div class="fields-row-2-second empty"></div>
+                <div class="fields-row-2-third empty"></div>
+                <div class="fields-row-2-fourth empty"></div>
+                <div class="fields-row-2-fifth empty"></div>
+            </div>
+            <div class="fields-row-3">
+                <div class="fields-row-3-first empty"></div>
+                <div class="fields-row-3-second empty"></div>
+                <div class="fields-row-3-third empty"></div>
+                <div class="fields-row-3-fourth empty"></div>
+                <div class="fields-row-3-fifth empty">
+                    <div class="fields-right-starting"></div>
+                </div>
+            </div>
+        </div>
+        <!-- top(yellow) and bottom(red) are the same - rotated 90deg -->
+        <div class="fields-top">
+            <div class="fields-row-1">
+                <div class="fields-row-1-first empty">
+                    <div class="fields-top-starting"></div>
+                </div>
+                <div class="fields-row-1-second empty"></div>
+                <div class="fields-row-1-third empty"></div>
+                <div class="fields-row-1-fourth empty"></div>
+                <div class="fields-row-1-fifth empty"></div>
+            </div>
+            <div class="fields-row-2">
+                <!-- house -->
+                <div class="fields-row-2-first empty"></div>
+                <div class="fields-row-2-second empty"></div>
+                <div class="fields-row-2-third empty"></div>
+                <div class="fields-row-2-fourth empty"></div>
+                <div class="fields-row-2-fifth empty"></div>
+            </div>
+            <div class="fields-row-3">
+                <div class="fields-row-3-first empty"></div>
+                <div class="fields-row-3-second empty"></div>
+                <div class="fields-row-3-third empty"></div>
+                <div class="fields-row-3-fourth empty"></div>
+                <div class="fields-row-3-fifth empty"></div>
+            </div>
+        </div>
+        <div class="fields-bottom">
+            <div class="fields-row-1">
+                <div class="fields-row-1-first empty"></div>
+                <div class="fields-row-1-second empty"></div>
+                <div class="fields-row-1-third empty"></div>
+                <div class="fields-row-1-fourth empty"></div>
+                <div class="fields-row-1-fifth empty"></div>
+            </div>
+            <div class="fields-row-2">
+                <!-- house -->
+                <div class="fields-row-2-first empty"></div>
+                <div class="fields-row-2-second empty"></div>
+                <div class="fields-row-2-third empty"></div>
+                <div class="fields-row-2-fourth empty"></div>
+                <div class="fields-row-2-fifth empty"></div>
+            </div>
+            <div class="fields-row-3">
+                <div class="fields-row-3-first empty"></div>
+                <div class="fields-row-3-second empty"></div>
+                <div class="fields-row-3-third empty"></div>
+                <div class="fields-row-3-fourth empty"></div>
+                <div class="fields-row-3-fifth empty">
+                    <div class="fields-bottom-starting"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,589 @@
+/* general */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("background.jpg");
+    height: 90vh;
+}
+
+/* background circle and lines */
+.background-square {
+    width: 55%;
+    height: 98vh;
+    border: 3px solid #fff;
+    background-color: rgba(250, 177, 137, 0.4);
+    border-radius: 30px;
+    position: absolute;
+    top: 1%;
+    left: 22.5%;
+}
+
+.background-line-left {
+    position: absolute;
+    top: 50vh;
+    width: 20%;
+    border-top: 3px solid #fff;
+}
+
+.background-line-right {
+    position: absolute;
+    top: 50vh;
+    right: 0;
+    width: 20%;
+    border-top: 3px solid #fff;
+}
+
+/* houses and house positioning */
+.house {
+    width: 12%;
+    height: 22%;
+    background-color: red;
+    border-radius: 30px;
+    border: 3px solid #fff;
+    position: relative;
+}
+
+.house-blue {
+    background-color: #253EBC;
+    height: 25%;
+    top: 1rem;
+    left: 1rem;
+}
+
+.house-yellow {
+    background-color: #F3F33E;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.house-green {
+    background-color: #27E459;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.house-red {
+    background-color: #F94A4A;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+/* pins general */
+.icon {
+    position: absolute;
+    width: 33%;
+    height: 35%;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* house pins */
+.icon-1-blue,
+.icon-1-yellow,
+.icon-1-green,
+.icon-1-red {
+    top: 1.5rem;
+    left: 1.5rem;
+}
+
+.icon-2-blue,
+.icon-2-yellow,
+.icon-2-green,
+.icon-2-red {
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+.icon-3-blue,
+.icon-3-yellow,
+.icon-3-green,
+.icon-3-red {
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+
+.icon-4-blue,
+.icon-4-yellow,
+.icon-4-green,
+.icon-4-red {
+    bottom: 1.5rem;
+    left: 1.5rem;
+}
+
+/* player icons that you move with dragNdrop */
+.player {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background-color: #253EBC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* blue */
+.player-blue {
+    background-color: #253EBC;
+}
+
+.blue-player-mark{
+    width: 50%;
+    height: 50%;
+    background-color: #fff;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* yellow */
+.player-yellow {
+    background-color: #F3F33E;
+}
+
+.yellow-player-mark-ver {
+    width: 30%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.yellow-player-mark-hor {
+    position: absolute;
+    top: 37.5%;
+    width: 66%;
+    height: 23%;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* green */
+.player-green {
+    background-color: #27E459;
+}
+
+.green-player-mark {
+    width: 70%;
+    height: 40%;
+    background-color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* red */
+.player-red {
+    background-color: #F94A4A;
+}
+
+.red-player-mark {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* main circle */
+.main-circle {
+    width: 48%;
+    height: 98vh;
+    position: absolute;
+    top: 1%;
+    left: 26.2%;    
+}
+
+/* dice */
+.dice {
+    position: absolute;
+    top: 46%;
+    left: 46%;
+    width: 8%;
+    height: 8vh;
+    background-color: #ff762b;
+    border: 2px solid #000;
+    border-radius: 15px;
+}
+
+.dice:hover {
+    background-color: #ed5400;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.dice-row-1,
+.dice-row-2,
+.dice-row-3 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: .48rem;
+}
+
+.dice-row-1-first,
+.dice-row-1-second,
+.dice-row-1-third {
+    height: 14px;
+    width: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.dice-row-2-first,
+.dice-row-2-second,
+.dice-row-2-third {
+    height: 14px;
+    width: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.dice-row-3-first,
+.dice-row-3-second,
+.dice-row-3-third {
+    height: 14px;
+    width: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* fields - left and right*/
+.fields-left,
+.fields-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.fields-left {
+    position: absolute;
+    top: 39.7%;
+    left: 0.5%;
+    width: 42%;
+    height: 20vh;
+}
+
+.fields-right {
+    position: absolute;
+    top: 39.7%;
+    right: 0.5%;
+    width: 42%;
+    height: 20vh;
+}
+
+/* fields - top and bottom*/
+.fields-top {
+    position: absolute;
+    top: 10.5%;
+    left: 29%;
+    width: 42%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transform: rotate(90deg);
+}
+
+.fields-bottom {
+    position: absolute;
+    bottom: 10.5%;
+    left: 29%;
+    width: 42%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transform: rotate(90deg);
+}
+
+/* fields for playing - positioning */
+.fields-row-1,
+.fields-row-2,
+.fields-row-3,
+.fields-row-4 {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.fields-row-1-first,
+.fields-row-1-second,
+.fields-row-1-third,
+.fields-row-1-fourth,
+.fields-row-1-fifth {
+    height: 45px;
+    width: 45px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+.fields-row-2-first,
+.fields-row-2-second,
+.fields-row-2-third,
+.fields-row-2-fourth,
+.fields-row-2-fifth {
+    border-radius: 50%;
+    background-color: #fff;
+    height: 60px;
+    width: 60px;
+}
+
+.fields-row-3-first,
+.fields-row-3-second,
+.fields-row-3-third,
+.fields-row-3-fourth,
+.fields-row-3-fifth {
+    height: 45px;
+    width: 45px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+/* moving house fields closer to the dice */
+.fields-left .fields-row-2 {
+    position: relative;
+    left: 1rem;
+}
+
+.fields-top .fields-row-2 {
+    position: relative;
+    left: 1rem;
+}
+
+.fields-right .fields-row-2 {
+    position: relative;
+    right: 1rem;
+}
+
+.fields-bottom .fields-row-2 {
+    position: relative;
+    right: 1rem;
+}
+
+/* giving apropriate color to each house fields */
+/* blue - left */
+.fields-left .fields-row-2 .fields-row-2-second,
+.fields-left .fields-row-2 .fields-row-2-third,
+.fields-left .fields-row-2 .fields-row-2-fourth,
+.fields-left .fields-row-2 .fields-row-2-fifth {
+    background-color: #253EBC;
+}
+
+/* yellow - top */
+.fields-top .fields-row-2 .fields-row-2-second,
+.fields-top .fields-row-2 .fields-row-2-third,
+.fields-top .fields-row-2 .fields-row-2-fourth,
+.fields-top .fields-row-2 .fields-row-2-fifth {
+    background-color: #F3F33E;
+}
+
+/* green - right */
+.fields-right .fields-row-2 .fields-row-2-first,
+.fields-right .fields-row-2 .fields-row-2-second,
+.fields-right .fields-row-2 .fields-row-2-third,
+.fields-right .fields-row-2 .fields-row-2-fourth {
+    background-color: #27E459;
+}
+
+/* red - bottom */
+.fields-bottom .fields-row-2 .fields-row-2-first,
+.fields-bottom .fields-row-2 .fields-row-2-second,
+.fields-bottom .fields-row-2 .fields-row-2-third,
+.fields-bottom .fields-row-2 .fields-row-2-fourth {
+    background-color: #F94A4A;
+}
+
+/* giving border to fields right before houses */
+.fields-left .fields-row-2 .fields-row-2-first,
+.fields-top .fields-row-2 .fields-row-2-first,
+.fields-right .fields-row-2 .fields-row-2-fifth,
+.fields-bottom .fields-row-2 .fields-row-2-fifth {
+    border: 1px solid #000;
+}
+
+/* styling starting fields */
+/* blue - left */
+.fields-left .fields-row-1 .fields-row-1-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fields-left-starting {
+    width: 25px;
+    height: 25px;
+    background-color: #253EBC;
+    border-radius: 50%;
+}
+
+/* yellow - top */
+.fields-top .fields-row-1 .fields-row-1-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fields-top-starting {
+    width: 25px;
+    height: 25px;
+    background-color: #F3F33E;
+    border-radius: 50%;
+}
+
+/* green - right */
+.fields-right .fields-row-3 .fields-row-3-fifth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fields-right-starting {
+    width: 25px;
+    height: 25px;
+    background-color: #27E459;
+    border-radius: 50%;
+}
+
+/* red - bottom */
+.fields-bottom .fields-row-3 .fields-row-3-fifth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fields-bottom-starting {
+    width: 25px;
+    height: 25px;
+    background-color: #F94A4A;
+    border-radius: 50%;
+}
+
+/* query for smaller screens */
+@media only screen and (max-width: 1366px) {
+    .background-square {
+        height: 99%;
+        top: 0.5%;
+    }
+
+    .icon {
+        margin: -0.5rem;
+    }
+
+    .player {
+        width: 45px;
+        height: 45px;
+    }
+
+    .dice {
+        border-radius: 12px;
+        height: 60px;
+        width: 60px;
+        left: 45.2%;
+        top: 45.5%;
+    }
+
+    .dice-row-1 {
+        margin-top: 0.35rem;
+    }
+    .dice-row-2 {
+        margin-top: 0.2rem;
+    }
+    .dice-row-3 {
+        margin-top: 0.2rem;
+    }
+
+    .dice-row-1-first,
+    .dice-row-1-second,
+    .dice-row-1-third {
+        margin: 0.1rem;
+        height: 10px;
+        width: 10px;
+    }
+    .dice-row-2-first,
+    .dice-row-2-second,
+    .dice-row-2-third {
+        margin: 0.1rem;
+        height: 10px;
+        width: 10px;
+    }
+    .dice-row-3-first,
+    .dice-row-3-second,
+    .dice-row-3-third {
+        margin: 0.1rem;
+        height: 10px;
+        width: 10px;
+    }
+
+    .fields-left .fields-row-2 {
+        left: .5rem;
+    }
+    
+    .fields-top .fields-row-2 {
+        left: .5rem;
+    }
+    
+    .fields-right .fields-row-2 {
+        right: .5rem;
+    }
+    
+    .fields-bottom .fields-row-2 {
+        right: .5rem;
+    }
+
+    .fields-row-1-first,
+    .fields-row-1-second,
+    .fields-row-1-third,
+    .fields-row-1-fourth,
+    .fields-row-1-fifth {
+        height: 40px;
+        width: 40px;
+    }
+
+    .fields-row-3-first,
+    .fields-row-3-second,
+    .fields-row-3-third,
+    .fields-row-3-fourth,
+    .fields-row-3-fifth {
+        height: 40px;
+        width: 40px;
+    }
+
+    .fields-row-2-first,
+    .fields-row-2-second,
+    .fields-row-2-third,
+    .fields-row-2-fourth,
+    .fields-row-2-fifth {
+        height: 48px;
+        width: 48px;
+    }
+
+    .fields-left-starting {
+        height: 20px;
+        width: 20px;
+    }
+    .fields-top-starting {
+        height: 20px;
+        width: 20px;
+    }
+    .fields-right-starting {
+        height: 20px;
+        width: 20px;
+    }
+    .fields-bottom-starting {
+        height: 20px;
+        width: 20px;
+    }
+
+}
